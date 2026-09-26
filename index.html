@@ -1,0 +1,1913 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IAG | Insurance Australia Group</title>
+
+    <meta name="description"
+          content="Insurance Australia Group — helping people protect what matters, recover from setbacks and build safer, stronger communities.">
+
+    <style>
+        :root {
+            --blue: #005eb8;
+            --blue-dark: #003f7d;
+            --blue-light: #eaf5ff;
+            --cyan: #00a5d9;
+            --navy: #10263d;
+            --dark: #17212b;
+            --text: #394652;
+            --muted: #697681;
+            --light: #f4f8fb;
+            --white: #fff;
+            --border: #dce5eb;
+            --max: 1240px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .container {
+            width: min(calc(100% - 40px), var(--max));
+            margin: auto;
+        }
+
+        /* =====================================
+           TOP BAR
+        ===================================== */
+
+        .topbar {
+            background: var(--navy);
+            color: #dce8f1;
+            font-size: 13px;
+        }
+
+        .topbar-inner {
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 25px;
+        }
+
+        .topbar a:hover {
+            color: #fff;
+        }
+
+        /* =====================================
+           HEADER
+        ===================================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,.97);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 29px;
+            font-weight: 850;
+            letter-spacing: -1.5px;
+            color: var(--blue);
+        }
+
+        .logo-mark {
+            width: 43px;
+            height: 43px;
+            position: relative;
+            overflow: hidden;
+            background: var(--blue);
+        }
+
+        .logo-mark::before,
+        .logo-mark::after {
+            content: "";
+            position: absolute;
+            background: #fff;
+            transform: skewX(-28deg);
+        }
+
+        .logo-mark::before {
+            width: 9px;
+            height: 58px;
+            left: 11px;
+            top: -7px;
+        }
+
+        .logo-mark::after {
+            width: 9px;
+            height: 58px;
+            left: 24px;
+            top: -7px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 29px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #263744;
+            font-size: 14px;
+            font-weight: 700;
+            transition: .2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--blue);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-btn {
+            padding: 12px 19px;
+            color: #fff;
+            background: var(--blue);
+            font-size: 13px;
+            font-weight: 800;
+            transition: .2s;
+        }
+
+        .contact-btn:hover {
+            background: var(--blue-dark);
+            transform: translateY(-1px);
+        }
+
+        .menu-btn {
+            display: none;
+            width: 43px;
+            height: 43px;
+            background: #fff;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* =====================================
+           HERO
+        ===================================== */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3,35,65,.98) 0%,
+                    rgba(0,76,130,.90) 45%,
+                    rgba(0,139,184,.50) 100%
+                ),
+                linear-gradient(
+                    135deg,
+                    #06335d,
+                    #008bb7
+                );
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 720px;
+            height: 720px;
+            right: -270px;
+            top: -210px;
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            right: -70px;
+            top: 60px;
+            border: 1px solid rgba(255,255,255,.11);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+            color: #fff;
+            padding: 95px 0;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            color: #8be5ff;
+            font-size: 12px;
+            font-weight: 850;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 37px;
+            height: 2px;
+            background: #61d8f5;
+        }
+
+        .hero h1 {
+            font-size: clamp(46px, 6vw, 76px);
+            line-height: 1.03;
+            letter-spacing: -3px;
+            margin-bottom: 24px;
+            font-weight: 760;
+        }
+
+        .hero h1 span {
+            color: #83e3fa;
+        }
+
+        .hero p {
+            max-width: 670px;
+            color: #e4f1f7;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            min-height: 52px;
+            padding: 0 26px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            font-size: 14px;
+            font-weight: 800;
+            transition: .2s;
+        }
+
+        .btn-primary {
+            background: #fff;
+            color: var(--blue-dark);
+        }
+
+        .btn-primary:hover {
+            background: #e8f8ff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border-color: rgba(255,255,255,.65);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,.1);
+        }
+
+        /* =====================================
+           QUICK LINKS
+        ===================================== */
+
+        .quick {
+            position: relative;
+            z-index: 10;
+            margin-top: -42px;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #fff;
+            box-shadow: 0 20px 45px rgba(12,48,72,.12);
+        }
+
+        .quick-item {
+            min-height: 125px;
+            padding: 27px;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: .2s;
+        }
+
+        .quick-item:last-child {
+            border-right: 0;
+        }
+
+        .quick-item:hover {
+            background: var(--blue-light);
+        }
+
+        .quick-item strong {
+            color: var(--blue);
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .quick-item span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =====================================
+           INTRO
+        ===================================== */
+
+        .intro {
+            padding: 110px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .section-label {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            color: var(--dark);
+            font-size: clamp(35px, 4vw, 52px);
+            line-height: 1.1;
+            letter-spacing: -1.8px;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.85;
+            margin-bottom: 18px;
+        }
+
+        .visual {
+            min-height: 430px;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    140deg,
+                    #06365e,
+                    #0077a9 55%,
+                    #1ab0ca
+                );
+        }
+
+        .visual::before {
+            content: "";
+            position: absolute;
+            width: 410px;
+            height: 410px;
+            border: 1px solid rgba(255,255,255,.28);
+            border-radius: 50%;
+            left: -120px;
+            top: 40px;
+        }
+
+        .visual::after {
+            content: "PROTECT\A WHAT MATTERS";
+            white-space: pre;
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            color: #fff;
+            font-size: 34px;
+            line-height: 1;
+            font-weight: 850;
+            letter-spacing: -1px;
+            text-align: right;
+        }
+
+        /* =====================================
+           PURPOSE
+        ===================================== */
+
+        .purpose {
+            background: var(--light);
+            padding: 105px 0;
+        }
+
+        .heading {
+            max-width: 720px;
+            margin-bottom: 48px;
+        }
+
+        .heading p {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.75;
+        }
+
+        .purpose-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .purpose-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 34px;
+            min-height: 300px;
+            transition: .25s;
+        }
+
+        .purpose-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(15,45,67,.09);
+            border-color: #b9d8e9;
+        }
+
+        .purpose-icon {
+            width: 55px;
+            height: 55px;
+            display: grid;
+            place-items: center;
+            background: var(--blue-light);
+            color: var(--blue);
+            font-size: 23px;
+            margin-bottom: 25px;
+        }
+
+        .purpose-card h3 {
+            color: var(--dark);
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .purpose-card p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .purpose-card a {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* =====================================
+           STATS
+        ===================================== */
+
+        .stats {
+            background: var(--navy);
+            color: #fff;
+            padding: 70px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat {
+            text-align: center;
+            padding: 10px 25px;
+            border-right: 1px solid rgba(255,255,255,.13);
+        }
+
+        .stat:last-child {
+            border-right: 0;
+        }
+
+        .stat strong {
+            display: block;
+            color: #8ee7ff;
+            font-size: 43px;
+            line-height: 1;
+            margin-bottom: 11px;
+        }
+
+        .stat span {
+            color: #aebec9;
+            font-size: 13px;
+        }
+
+        /* =====================================
+           BRANDS
+        ===================================== */
+
+        .brands {
+            padding: 105px 0;
+        }
+
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .brand-card {
+            border: 1px solid var(--border);
+            padding: 30px;
+            min-height: 220px;
+            transition: .2s;
+        }
+
+        .brand-card:hover {
+            border-color: #b9d8e9;
+            box-shadow: 0 15px 35px rgba(0,0,0,.06);
+            transform: translateY(-4px);
+        }
+
+        .brand-name {
+            color: var(--blue);
+            font-size: 25px;
+            font-weight: 850;
+            margin-bottom: 13px;
+        }
+
+        .brand-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .brand-card a {
+            display: inline-block;
+            margin-top: 18px;
+            color: var(--blue);
+            font-weight: 800;
+            font-size: 13px;
+        }
+
+        /* =====================================
+           FEATURE
+        ===================================== */
+
+        .feature {
+            background: var(--light);
+            padding: 105px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: .95fr 1.05fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .feature-visual {
+            min-height: 480px;
+            background:
+                linear-gradient(
+                    145deg,
+                    #d9edf5,
+                    #62b7d4 52%,
+                    #00679e
+                );
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-visual::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 530px;
+            right: 35px;
+            top: -70px;
+            border-radius: 50%;
+            border: 50px solid rgba(255,255,255,.2);
+            transform: rotate(25deg);
+        }
+
+        .feature-visual::after {
+            content: "SAFER\A STRONGER\A COMMUNITIES";
+            white-space: pre;
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+            color: #fff;
+            font-size: 32px;
+            font-weight: 900;
+            line-height: .95;
+        }
+
+        .feature-content p {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .checks {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .checks li {
+            position: relative;
+            padding-left: 30px;
+            margin: 12px 0;
+            color: #34434e;
+            font-weight: 600;
+        }
+
+        .checks li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--blue);
+            font-weight: 900;
+        }
+
+        .blue-btn {
+            background: var(--blue);
+            color: #fff;
+        }
+
+        .blue-btn:hover {
+            background: var(--blue-dark);
+            transform: translateY(-2px);
+        }
+
+        /* =====================================
+           NEWS
+        ===================================== */
+
+        .news {
+            padding: 105px 0;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .news-card {
+            border: 1px solid var(--border);
+            background: #fff;
+            overflow: hidden;
+            transition: .2s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.07);
+        }
+
+        .news-image {
+            height: 195px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #06335b,
+                    #008bb7 60%,
+                    #6fd3df
+                );
+            position: relative;
+        }
+
+        .news-image span {
+            position: absolute;
+            left: 22px;
+            bottom: 18px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .news-body {
+            padding: 25px;
+        }
+
+        .news-date {
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .news-body h3 {
+            color: var(--dark);
+            font-size: 20px;
+            line-height: 1.35;
+            margin: 9px 0;
+        }
+
+        .news-body p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 17px;
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* =====================================
+           CTA
+        ===================================== */
+
+        .cta {
+            padding: 90px 0;
+            color: #fff;
+            background:
+                linear-gradient(
+                    120deg,
+                    #00365f,
+                    #006e9f
+                );
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .cta h2 {
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1.1;
+            letter-spacing: -1.8px;
+            margin-bottom: 13px;
+        }
+
+        .cta p {
+            max-width: 670px;
+            color: #d8ebf4;
+            font-size: 17px;
+        }
+
+        /* =====================================
+           FOOTER
+        ===================================== */
+
+        footer {
+            background: #0c151e;
+            color: #fff;
+            padding-top: 70px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr repeat(3, 1fr);
+            gap: 50px;
+            padding-bottom: 60px;
+        }
+
+        .footer-brand p {
+            color: #85939e;
+            max-width: 370px;
+            margin-top: 18px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            color: #8fe3f8;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            margin-bottom: 19px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin: 10px 0;
+        }
+
+        .footer-links a {
+            color: #85939e;
+            font-size: 14px;
+            transition: .2s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,.09);
+            padding: 23px 0;
+            color: #66747e;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                left: 20px;
+                right: 20px;
+                top: 82px;
+                background: #fff;
+                border: 1px solid var(--border);
+                padding: 18px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+                box-shadow: 0 20px 40px rgba(0,0,0,.12);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                width: 100%;
+                padding: 13px 4px;
+            }
+
+            .menu-btn {
+                display: grid;
+                place-items: center;
+            }
+
+            .contact-btn {
+                display: none;
+            }
+
+            .purpose-grid,
+            .brand-grid,
+            .news-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: min(calc(100% - 28px), var(--max));
+            }
+
+            .topbar-inner {
+                justify-content: center;
+            }
+
+            .topbar a:nth-child(n+3) {
+                display: none;
+            }
+
+            .nav {
+                min-height: 70px;
+            }
+
+            .nav-links {
+                top: 70px;
+                left: 14px;
+                right: 14px;
+            }
+
+            .hero {
+                min-height: 590px;
+            }
+
+            .hero-content {
+                padding: 75px 0;
+            }
+
+            .hero h1 {
+                font-size: 47px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .quick {
+                margin-top: 0;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .quick-item:nth-child(2) {
+                border-right: 0;
+            }
+
+            .intro,
+            .purpose,
+            .brands,
+            .feature,
+            .news {
+                padding: 75px 0;
+            }
+
+            .intro-grid,
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .purpose-grid,
+            .brand-grid,
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                row-gap: 30px;
+            }
+
+            .stat:nth-child(2) {
+                border-right: 0;
+            }
+
+            .feature-visual {
+                min-height: 350px;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .copyright {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 430px) {
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-item {
+                border-right: 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .quick-item:last-child {
+                border-bottom: 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                border-right: 0;
+                border-bottom: 1px solid rgba(255,255,255,.13);
+                padding: 20px 0;
+            }
+
+            .stat:last-child {
+                border-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <a href="#customers">Customers</a>
+            <a href="#investors">Investors</a>
+            <a href="#careers">Careers</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav">
+
+            <a href="#" class="logo">
+                <span class="logo-mark"></span>
+                IAG
+            </a>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About IAG</a></li>
+                    <li><a href="#brands">Our Brands</a></li>
+                    <li><a href="#purpose">Our Purpose</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#investors">Investors</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="contact-btn">
+                    Contact
+                </a>
+
+                <button
+                    class="menu-btn"
+                    id="menuBtn"
+                    aria-label="Open navigation">
+                    ☰
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="about">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="eyebrow">
+                        Insurance Australia Group
+                    </div>
+
+                    <h1>
+                        Making your world a
+                        <span>safer place.</span>
+                    </h1>
+
+                    <p>
+                        We help people protect what matters, recover from
+                        setbacks and move forward with confidence — while
+                        supporting safer and more resilient communities.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#purpose" class="btn btn-primary">
+                            Discover IAG
+                        </a>
+
+                        <a href="#brands" class="btn btn-outline">
+                            Explore Our Brands
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK LINKS -->
+        <section class="quick">
+
+            <div class="container">
+
+                <div class="quick-grid">
+
+                    <a href="#purpose" class="quick-item">
+                        <strong>Our Purpose</strong>
+                        <span>
+                            Helping create a safer, stronger future.
+                        </span>
+                    </a>
+
+                    <a href="#brands" class="quick-item">
+                        <strong>Our Brands</strong>
+                        <span>
+                            Explore trusted insurance businesses.
+                        </span>
+                    </a>
+
+                    <a href="#investors" class="quick-item">
+                        <strong>Investors</strong>
+                        <span>
+                            Results, reports and company information.
+                        </span>
+                    </a>
+
+                    <a href="#careers" class="quick-item">
+                        <strong>Careers</strong>
+                        <span>
+                            Find your opportunity at IAG.
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRO -->
+        <section class="intro">
+
+            <div class="container intro-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        Who We Are
+                    </div>
+
+                    <h2 class="section-title">
+                        Protecting what matters across Australia and New Zealand.
+                    </h2>
+
+                    <p>
+                        Insurance Australia Group is a general insurance
+                        group with businesses serving customers across
+                        Australia and New Zealand.
+                    </p>
+
+                    <p>
+                        Through a portfolio of trusted brands and insurance
+                        businesses, IAG helps customers protect their homes,
+                        vehicles, businesses and other things that matter.
+                    </p>
+
+                </div>
+
+                <div class="visual"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PURPOSE -->
+        <section class="purpose" id="purpose">
+
+            <div class="container">
+
+                <div class="heading">
+
+                    <div class="section-label">
+                        Our Purpose
+                    </div>
+
+                    <h2 class="section-title">
+                        Insurance that supports people and communities.
+                    </h2>
+
+                    <p>
+                        Our work goes beyond policies and claims. We aim to
+                        help customers recover from setbacks and contribute
+                        to safer, stronger and more resilient communities.
+                    </p>
+
+                </div>
+
+
+                <div class="purpose-grid">
+
+                    <article class="purpose-card">
+
+                        <div class="purpose-icon">
+                            ◈
+                        </div>
+
+                        <h3>
+                            Protect
+                        </h3>
+
+                        <p>
+                            Helping customers protect the people, places,
+                            possessions and businesses that matter to them.
+                        </p>
+
+                        <a href="#">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <article class="purpose-card">
+
+                        <div class="purpose-icon">
+                            ↗
+                        </div>
+
+                        <h3>
+                            Recover
+                        </h3>
+
+                        <p>
+                            Supporting customers when unexpected events
+                            disrupt their lives and businesses.
+                        </p>
+
+                        <a href="#">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+
+                    <article class="purpose-card">
+
+                        <div class="purpose-icon">
+                            ◎
+                        </div>
+
+                        <h3>
+                            Build Resilience
+                        </h3>
+
+                        <p>
+                            Working with communities and partners to help
+                            understand and reduce risks.
+                        </p>
+
+                        <a href="#">
+                            Learn more →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+        <section class="stats">
+
+            <div class="container stats-grid">
+
+                <div class="stat">
+                    <strong>165+</strong>
+                    <span>
+                        Years of insurance heritage
+                    </span>
+                </div>
+
+                <div class="stat">
+                    <strong>7.3M+</strong>
+                    <span>
+                        Customers protected across Australia and NZ
+                    </span>
+                </div>
+
+                <div class="stat">
+                    <strong>$18B+</strong>
+                    <span>
+                        Gross written premium underwritten per annum
+                    </span>
+                </div>
+
+                <div class="stat">
+                    <strong>12,500+</strong>
+                    <span>
+                        People across Australia and New Zealand
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BRANDS -->
+        <section class="brands" id="brands">
+
+            <div class="container">
+
+                <div class="heading">
+
+                    <div class="section-label">
+                        Our Brands
+                    </div>
+
+                    <h2 class="section-title">
+                        Trusted insurance brands.
+                    </h2>
+
+                    <p>
+                        Our portfolio includes brands serving customers,
+                        businesses, brokers and communities across Australia
+                        and New Zealand.
+                    </p>
+
+                </div>
+
+
+                <div class="brand-grid">
+
+                    <article class="brand-card">
+
+                        <div class="brand-name">
+                            NRMA Insurance
+                        </div>
+
+                        <p>
+                            Insurance services helping Australians protect
+                            cars, homes, businesses and more.
+                        </p>
+
+                        <a href="#">
+                            Visit Brand →
+                        </a>
+
+                    </article>
+
+
+                    <article class="brand-card">
+
+                        <div class="brand-name">
+                            CGU
+                        </div>
+
+                        <p>
+                            Insurance solutions for individuals,
+                            businesses and intermediary partners.
+                        </p>
+
+                        <a href="#">
+                            Visit Brand →
+                        </a>
+
+                    </article>
+
+
+                    <article class="brand-card">
+
+                        <div class="brand-name">
+                            WFI
+                        </div>
+
+                        <p>
+                            Insurance focused on agriculture, regional
+                            and remote Australian communities.
+                        </p>
+
+                        <a href="#">
+                            Visit Brand →
+                        </a>
+
+                    </article>
+
+
+                    <article class="brand-card">
+
+                        <div class="brand-name">
+                            NZI
+                        </div>
+
+                        <p>
+                            General insurance solutions and support
+                            for New Zealand businesses and brokers.
+                        </p>
+
+                        <a href="#">
+                            Visit Brand →
+                        </a>
+
+                    </article>
+
+
+                    <article class="brand-card">
+
+                        <div class="brand-name">
+                            AMI
+                        </div>
+
+                        <p>
+                            A New Zealand insurance brand supporting
+                            customers with personalised protection.
+                        </p>
+
+                        <a href="#">
+                            Visit Brand →
+                        </a>
+
+                    </article>
+
+
+                    <article class="brand-card">
+
+                        <div class="brand-name">
+                            State
+                        </div>
+
+                        <p>
+                            Insurance products designed to provide
+                            straightforward protection for customers.
+                        </p>
+
+                        <a href="#">
+                            Visit Brand →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURE -->
+        <section class="feature">
+
+            <div class="container feature-grid">
+
+                <div class="feature-visual"></div>
+
+                <div class="feature-content">
+
+                    <div class="section-label">
+                        Safer Communities
+                    </div>
+
+                    <h2 class="section-title">
+                        Building resilience for tomorrow.
+                    </h2>
+
+                    <p>
+                        Natural disasters and other unexpected events can
+                        affect people, businesses and entire communities.
+                        Understanding risk and investing in resilience can
+                        help reduce the impact of these events.
+                    </p>
+
+                    <ul class="checks">
+
+                        <li>
+                            Supporting customers through recovery
+                        </li>
+
+                        <li>
+                            Understanding emerging risks
+                        </li>
+
+                        <li>
+                            Working with communities and partners
+                        </li>
+
+                        <li>
+                            Developing more sustainable insurance solutions
+                        </li>
+
+                    </ul>
+
+                    <a href="#" class="btn blue-btn">
+                        Explore Our Approach
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NEWS -->
+        <section class="news" id="news">
+
+            <div class="container">
+
+                <div class="heading">
+
+                    <div class="section-label">
+                        Latest
+                    </div>
+
+                    <h2 class="section-title">
+                        IAG news & insights.
+                    </h2>
+
+                    <p>
+                        Explore company updates, insurance insights,
+                        community initiatives and investor information.
+                    </p>
+
+                </div>
+
+
+                <div class="news-grid">
+
+                    <article class="news-card">
+
+                        <div class="news-image">
+                            <span>
+                                Company
+                            </span>
+                        </div>
+
+                        <div class="news-body">
+
+                            <div class="news-date">
+                                Company Update
+                            </div>
+
+                            <h3>
+                                Creating a stronger and more resilient future.
+                            </h3>
+
+                            <p>
+                                Discover how IAG is evolving its business
+                                and supporting customers across the region.
+                            </p>
+
+                            <a href="#" class="read-more">
+                                Read More →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="news-card">
+
+                        <div class="news-image">
+                            <span>
+                                Communities
+                            </span>
+                        </div>
+
+                        <div class="news-body">
+
+                            <div class="news-date">
+                                Community
+                            </div>
+
+                            <h3>
+                                Helping communities prepare for risk.
+                            </h3>
+
+                            <p>
+                                Learn about initiatives designed to improve
+                                community resilience and recovery.
+                            </p>
+
+                            <a href="#" class="read-more">
+                                Read More →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="news-card">
+
+                        <div class="news-image">
+                            <span>
+                                Investors
+                            </span>
+                        </div>
+
+                        <div class="news-body">
+
+                            <div class="news-date">
+                                Investor Information
+                            </div>
+
+                            <h3>
+                                Results, reports and market announcements.
+                            </h3>
+
+                            <p>
+                                Access company information and reporting
+                                resources for shareholders and investors.
+                            </p>
+
+                            <a href="#" class="read-more">
+                                View Information →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+        <section class="cta" id="careers">
+
+            <div class="container cta-inner">
+
+                <div>
+
+                    <h2>
+                        Help create a safer future.
+                    </h2>
+
+                    <p>
+                        Explore opportunities to work with teams across
+                        insurance, technology, data, customer experience,
+                        risk and corporate functions.
+                    </p>
+
+                </div>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="btn btn-primary">
+                        Explore Careers
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Contact IAG
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo" style="color:#fff;">
+                    <span class="logo-mark"></span>
+                    IAG
+                </a>
+
+                <p>
+                    Insurance Australia Group is a general insurance
+                    group serving customers and communities across
+                    Australia and New Zealand.
+                </p>
+
+                <p style="margin-top:15px;">
+                    Sydney, New South Wales<br>
+                    Australia
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Company
+                </div>
+
+                <ul class="footer-links">
+                    <li><a href="#about">About IAG</a></li>
+                    <li><a href="#purpose">Our Purpose</a></li>
+                    <li><a href="#brands">Our Brands</a></li>
+                    <li><a href="#careers">Careers</a></li>
+                </ul>
+
+            </div>
+
+
+            <div id="investors">
+
+                <div class="footer-title">
+                    Investors
+                </div>
+
+                <ul class="footer-links">
+                    <li><a href="#">Financial Results</a></li>
+                    <li><a href="#">Annual Reports</a></li>
+                    <li><a href="#">ASX Announcements</a></li>
+                    <li><a href="#">Shareholder Centre</a></li>
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <div class="footer-title">
+                    Resources
+                </div>
+
+                <ul class="footer-links">
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="container copyright">
+
+            <span>
+                © 2026 Insurance Australia Group Limited.
+                All rights reserved.
+            </span>
+
+            <span>
+                Privacy · Accessibility · Legal
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+            if (navLinks.classList.contains("active")) {
+                menuBtn.textContent = "✕";
+            } else {
+                menuBtn.textContent = "☰";
+            }
+
+        });
+
+
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("active");
+                menuBtn.textContent = "☰";
+
+            });
+
+        });
+
+
+        /* Scroll reveal */
+
+        const revealElements = document.querySelectorAll(
+            ".quick-item, .purpose-card, .brand-card, .news-card, .stat, .intro-grid, .feature-grid"
+        );
+
+        const observer = new IntersectionObserver(
+            function(entries) {
+
+                entries.forEach(function(entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+
+                        observer.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+
+        revealElements.forEach(function(element) {
+
+            element.style.opacity = "0";
+            element.style.transform = "translateY(25px)";
+            element.style.transition =
+                "opacity .7s ease, transform .7s ease";
+
+            observer.observe(element);
+
+        });
+
+
+        /* Close mobile menu when clicking outside */
+
+        document.addEventListener("click", function(event) {
+
+            if (
+                !event.target.closest(".nav") &&
+                navLinks.classList.contains("active")
+            ) {
+
+                navLinks.classList.remove("active");
+                menuBtn.textContent = "☰";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
+```
